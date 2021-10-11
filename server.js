@@ -28,6 +28,10 @@ server.get('/myjson', (req,res)=>{
     res.send(respuesta);
 });
 
+server.use((req,res,) =>{
+    res.status(404).send('Estos androides no son los que buscas');
+});
+
 server.listen(listenPort,
     () => console.log(`El servidor esta corriendo en ${listenPort}`)
     
